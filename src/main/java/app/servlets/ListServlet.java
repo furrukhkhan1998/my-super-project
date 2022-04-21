@@ -19,7 +19,6 @@ public class ListServlet extends HttpServlet {
         Model model = Model.getInstance();
         List<String> names = model.list();
         req.setAttribute("userNames", names);
-
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("list.jsp");
         requestDispatcher.forward(req, resp);
 

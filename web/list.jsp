@@ -23,6 +23,9 @@
             {
                 out.println("<p>There are no users yet!</p>");
             }
+
+            out.println("The current date is " + new java.util.Date().toString());
+
         %>
     </ul>
     <button onclick="location.href='home.html'">Home</button>

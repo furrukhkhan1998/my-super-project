@@ -17,10 +17,12 @@ public class LogoutServlet extends HttpServlet {
         request.getRequestDispatcher("link.html").include(request, response);
 
         HttpSession session=request.getSession();
-        session.invalidate();
+        if(session != null){
+            session.invalidate();
+        }
+
 
         out.print("You are successfully logged out!");
-
         out.close();
     }
 }

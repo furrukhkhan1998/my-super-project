@@ -1,5 +1,9 @@
 package app.servlets;
 
+
+
+import app.SessionHandling.ExampleBind;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
@@ -17,10 +21,13 @@ public class ProfileServlet extends HttpServlet {
         HttpSession session=request.getSession(false);
         if(session!=null){
             String name=(String)session.getAttribute("name");
-
+            ExampleBind exampleBind = new ExampleBind();
+            session.setAttribute("exampleBind", exampleBind);
             out.print("Hello, "+name+" Welcome to Profile");
         }
         else{
+            session = request.getSession(true);
+            System.out.println(session.getCreationTime());
             out.print("Please login first");
             request.getRequestDispatcher("login.html").include(request, response);
         }

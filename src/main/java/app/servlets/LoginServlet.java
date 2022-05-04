@@ -1,5 +1,8 @@
 package app.servlets;
 
+
+import app.SessionHandling.ExampleBind;
+
 import java.io.IOException;
 import java.io.PrintWriter;
 
@@ -23,7 +26,7 @@ public class LoginServlet extends HttpServlet {
             HttpSession session=request.getSession();
             session.setAttribute("name",name);
             String url = request.getContextPath();
-            url =url + "/home.html";
+            url =url + "/HomeServlet";
             response.sendRedirect(url);
         }
         else{

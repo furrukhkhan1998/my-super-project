@@ -30,6 +30,6 @@
     <jsp:include page = "date.jsp" flush = "true"/>
     <jsp:include page = "headers.jsp" flush = "true"/>
     <jsp:include page = "clock.jsp" flush = "true"/>
-    <button onclick="location.href='home.html'">Home</button>
+    <button onclick="location.href='/HomeServlet'">Home</button>
 </body>
 </html>

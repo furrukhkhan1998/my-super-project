@@ -7,27 +7,22 @@
     <session-config>
         <session-timeout>1</session-timeout>
     </session-config>
-
     <servlet>
         <servlet-name>add</servlet-name>
         <servlet-class>app.servlets.AddServlet</servlet-class>
     </servlet>
-    
-    <servlet-mapping>
+        <servlet-mapping>
         <servlet-name>add</servlet-name>
         <url-pattern>/add</url-pattern>
     </servlet-mapping>
-    
-    <servlet>
+        <servlet>
         <servlet-name>list</servlet-name>
         <servlet-class>app.servlets.ListServlet</servlet-class>
     </servlet>
-    
-    <servlet-mapping>
+        <servlet-mapping>
         <servlet-name>list</servlet-name>
         <url-pattern>/list</url-pattern>
     </servlet-mapping>
-
     <servlet>
         <display-name>LoginServlet</display-name>
         <servlet-name>LoginServlet</servlet-name>
@@ -55,6 +50,18 @@
         <servlet-name>LogoutServlet</servlet-name>
         <url-pattern>/LogoutServlet</url-pattern>
     </servlet-mapping>
+    <servlet>
+        <display-name>HomeServlet</display-name>
+        <servlet-name>HomeServlet</servlet-name>
+        <servlet-class>app.servlets.HomeServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>HomeServlet</servlet-name>
+        <url-pattern>/HomeServlet</url-pattern>
+    </servlet-mapping>
+    <welcome-file-list>
+        <welcome-file>home.html</welcome-file>
+    </welcome-file-list>
 
     <!-- Security -->
     <security-constraint>

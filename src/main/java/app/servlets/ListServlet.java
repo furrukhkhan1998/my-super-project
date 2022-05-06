@@ -1,5 +1,6 @@
 package app.servlets;
 
+import app.model.ComplexObject;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -18,6 +19,8 @@ public class ListServlet extends HttpServlet {
 
         Model model = Model.getInstance();
         List<String> names = model.list();
+        ComplexObject obj = (ComplexObject) req.getSession().getAttribute("ComplexObject");
+        System.out.println("Complex obj printing = " + obj.getName());
         req.setAttribute("userNames", names);
         RequestDispatcher requestDispatcher = req.getRequestDispatcher("list.jsp");
         requestDispatcher.forward(req, resp);

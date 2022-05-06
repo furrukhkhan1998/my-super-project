@@ -2,12 +2,17 @@
   <artifact type="exploded-war" name="my-super-project:war exploded">
     <output-path>$PROJECT_DIR$/out/artifacts/my_super_project_war_exploded</output-path>
     <root id="root">
-      <element id="javaee-facet-resources" facet="my-super-project/web/Web" />
       <element id="directory" name="WEB-INF">
         <element id="directory" name="classes">
           <element id="module-output" name="my-super-project" />
         </element>
+        <element id="directory" name="lib">
+          <element id="library" level="project" name="Maven: org.jetbrains:annotations:23.0.0" />
+          <element id="library" level="project" name="Maven: mysql:mysql-connector-java:8.0.26" />
+          <element id="library" level="project" name="Maven: com.google.protobuf:protobuf-java:3.11.4" />
+        </element>
       </element>
+      <element id="javaee-facet-resources" facet="my-super-project/web/Web" />
     </root>
   </artifact>
 </component>

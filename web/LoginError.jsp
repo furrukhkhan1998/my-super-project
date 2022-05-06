@@ -11,7 +11,8 @@
 
 <h1>INVALID LOGIN!!!</h1>
 <h1><% out.print("The error is " + request.getHeader("T")); %></h1>
-<form method = "POST" action ="j_security_check">
+<h1><% out.print("The error is " + request.getHeader("Error")); %></h1>
+<form method = "POST" action ="LoginServlet">
     <table border = "0">
         <tr>
             <td>Login</td>

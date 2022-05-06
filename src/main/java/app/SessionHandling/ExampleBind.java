@@ -11,18 +11,21 @@ public class ExampleBind implements HttpSessionBindingListener {
     @Override
     public void valueBound(HttpSessionBindingEvent event){
         HttpSession session = event.getSession();
-        System.out.println(" USER HAS LOGGED IN SUCCESSFULLY! ");
-        System.out.println("The event name is " + event.getName() + " The even value is " + event.getValue() +
+        System.out.println(" USER HAS LOGGED IN SUCCESSFULLY! Complex Object set");
+        System.out.println("The event name is " + event.getName() + " The event value is " + event.getValue() +
                 " The session id is " + session.getId());
     }
 
     @Override
     public void valueUnbound(HttpSessionBindingEvent event) {
         HttpSession session = event.getSession();
-        System.out.println("Session destroyed");
-        System.out.println("The event name is " + event.getName() + " The even value is " + event.getValue() +
+        System.out.println("Complex Object unloaded!");
+        System.out.println("The event name is " + event.getName() + " The event value is " + event.getValue() +
                 " The session id is " + session.getId());
-        session.invalidate();
-    }
+        if(session != null){
+            System.out.println("invalidating session in value unbound!");
+            session.invalidate();
+        }
 
+    }
 }

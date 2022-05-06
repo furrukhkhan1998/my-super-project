@@ -9,7 +9,7 @@
 <html>
 <body bgcolor = "#ffffff">
 
-<form method = "POST" action ="j_security_check">
+<form method = "POST" action ="LoginServlet">
     <table border = "0">
         <tr>
             <td>Login</td>

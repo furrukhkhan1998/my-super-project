@@ -1,6 +1,7 @@
 package app.servlets;
 
 import app.entities.User;
+import app.model.ComplexObject;
 import app.model.Model;
 
 import javax.servlet.RequestDispatcher;
@@ -33,6 +34,9 @@ public class AddServlet extends HttpServlet {
 
         Date created = new Date(session.getCreationTime());
         Date lastAccess = new Date(session.getLastAccessedTime());
+
+        ComplexObject obj = new ComplexObject("i am a complex Object", 2, 19000F);
+        session.setAttribute("ComplexObject", obj);
 
         String title = "Welcome Back to my website";
         Integer visitCount = new Integer(0);
